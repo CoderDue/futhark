@@ -14,6 +14,9 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - name: Ensure script is executable
+      run: chmod +x .github/actions/cmp-benchmark/cmp-benchmark.sh
+      shell: bash
     - uses: ./.github/actions/futhark-slurm
       with:
         script: .github/actions/cmp-benchmark/cmp-benchmark.sh ${{inputs.backend}} ${{inputs.system}}
