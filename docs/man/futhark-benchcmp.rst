@@ -27,9 +27,8 @@ it is statistically significant and slower.  Significance is determined
 by comparing the difference in means against the sum of half-standard-
 deviations of the two samples.
 
-``FILE_A`` is conventionally the *baseline* (e.g. the result from the
-``master`` branch) and ``FILE_B`` is the *new* result (e.g. a pull
-request).  The typical workflow is::
+``FILE_A`` is conventionally the *baseline* and ``FILE_B`` the *new*
+result.  The typical workflow is::
 
   futhark bench --backend=cuda --json baseline.json prog.fut
   # ... make changes ...
